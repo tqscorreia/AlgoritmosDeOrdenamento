@@ -103,7 +103,7 @@ def sort(lista):
 
 
 
-for i in range(1,11):
+for i in range(1, 11):
 
     lista = arrayDesc(i)
 
@@ -113,7 +113,7 @@ for i in range(1,11):
     print("tempo em sec "+str(fim-ini))
     print("--------------------------------------------")
 
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
     lista = arrayDesc(i)
 
