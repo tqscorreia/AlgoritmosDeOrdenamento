@@ -12,7 +12,6 @@ def outln(n):
 
 
 def arrayDesc(i):
-    # n = int(readln())*100000
     n = i * 100000
     lista = []
     for i in range(n):
@@ -20,7 +19,6 @@ def arrayDesc(i):
     return lista
 
 def arrayAleatorio(i):
-    # n = int(readln())*100000
     n = i * 100000
     lista = []
     for i in range(n):
@@ -29,45 +27,32 @@ def arrayAleatorio(i):
     return lista
 
 def array5(i):
-    #n = int(readln())*100000
     n = i*100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.95)):
         lista.append(i)
-
     for i in range(int(n*0.95), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 def array1(i):
-    # n = int(readln())*100000
     n = i * 100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.99)):
         lista.append(i)
-
     for i in range(int(n*0.99), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 def sort(lista):
-
     n = len(lista)
     k = 2
 
@@ -77,7 +62,6 @@ def sort(lista):
     #gap = n // (3 * k + 1)//k=1
     #gap = n // ((3 ** (k - 1) // 2))//k=2
     #gap = n // (2**k+1)
-
 
     while gap > 0:
 
@@ -105,7 +89,6 @@ def sort(lista):
         k += 1
 
         #gap //= 2
-
         gap //= 10
         #gap //= (3 * k + 1)
         #gap //= ((3 ** (k - 1) // 2))
@@ -114,24 +97,15 @@ def sort(lista):
 
 
     #for i in range (len(lista)):
-     #   outln(lista[i])
+    #   outln(lista[i])
 
-"""
-n = int(readln())
-lista = []
-for i in range(n):
-    aux = int(readln())
-    lista.append(aux)
-sort(lista)"""
+
 
 
 
 for i in range(1,11):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
 
     ini = time.time()
     sort(lista)
@@ -142,9 +116,6 @@ for i in range(1,11):
 for i in range(20,110,10):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
 
     ini = time.time()
     sort(lista)
