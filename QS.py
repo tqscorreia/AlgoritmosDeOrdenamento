@@ -28,38 +28,28 @@ def arrayAleatorio(i):
 
 def array5(i):
     n = i*100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.95)):
         lista.append(i)
-
     for i in range(int(n*0.95), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 def array1(i):
     n = i * 100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.99)):
         lista.append(i)
-
     for i in range(int(n*0.99), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 def partition(arr, low, high):
@@ -85,7 +75,6 @@ def partition(arr, low, high):
     for j in range(low, high):
 
         if arr[j] <= pivot:
-
             i = i + 1
             arr[i], arr[j] = arr[j], arr[i]
 
@@ -100,7 +89,6 @@ def quickSort(arr, low, high):
     if low < high:
 
         pi = partition(arr, low, high)
-
         quickSort(arr, low, pi - 1)
         quickSort(arr, pi + 1, high)
 
@@ -113,143 +101,106 @@ sheet1.write(0, 2, 'DESC')
 sheet1.write(0, 3, '5%')
 sheet1.write(0, 4, '1%')
 
-for i in range(1,11):
+for i in range(1, 11):
 
-    #lista = arrayDesc(i)
     lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
+    n = len(lista)
     sheet1.write(i, 0, n)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 1, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
-
-    #lista = arrayDesc(i)
     lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
     sheet1.write(q, 0, n)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 1, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
-for i in range(1,11):
+for i in range(1, 11):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
-
+    n = len(lista)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 2, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
 
-
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 2, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
-for i in range(1,11):
+for i in range(1, 11):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
     lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
+    n = len(lista)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 3, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
     lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 3, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
 for i in range(1,11):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    lista = array1(i)
-    n=len(lista)
-
-    ini = time.time()
-    quickSort(lista, 0, n-1)
-    fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
-    sheet1.write(i, 4, int((fim-ini)*1000))
-
-q = 11
-for i in range(20,110,10):
-
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
     lista = array1(i)
     n = len(lista)
 
     ini = time.time()
     quickSort(lista, 0, n-1)
     fim = time.time()
-    print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
+    sheet1.write(i, 4, int((fim-ini)*1000))
+
+q = 11
+for i in range(20, 110, 10):
+
+    lista = array1(i)
+    n = len(lista)
+
+    ini = time.time()
+    quickSort(lista, 0, n-1)
+    fim = time.time()
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 4, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 print("--------------------------------------------")
 
 wb.save('QS.xls')
-"""
-n = int(readln())
-lista = []
-for i in range(n):
-    aux = int(readln())
-    lista.append(aux)
-quickSort(lista, 0, n-1)
-for i in lista:
-    outln(i)
-"""
