@@ -11,7 +11,6 @@ def outln(n):
     stdout.write("\n")
 
 def arrayDesc(i):
-    # n = int(readln())*100000
     n = i * 100000
     lista = []
     for i in range(n):
@@ -19,9 +18,7 @@ def arrayDesc(i):
     return lista
 
 def arrayAleatorio(i):
-    # n = int(readln())*100000
     n = i * 100000
-
     lista = []
     for i in range(n):
         lista.append(i)
@@ -29,41 +26,29 @@ def arrayAleatorio(i):
     return lista
 
 def array5(i):
-    #n = int(readln())*100000
     n = i*100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.95)):
         lista.append(i)
-
     for i in range(int(n*0.95), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 def array1(i):
-    # n = int(readln())*100000
     n = i * 100000
-
     lista = []
     desord = []
-
     for i in range(0, int(n*0.99)):
         lista.append(i)
-
     for i in range(int(n*0.99), n):
         desord.append(i)
     random.shuffle(desord)
-
     for i in desord:
         lista.append(i)
-
     return lista
 
 
@@ -71,7 +56,6 @@ def countingSort(arr, exp1):
     n = len(arr)
 
     output = [0] * (n)
-
     count = [0] * (10)
 
     for i in range(0, n):
@@ -110,133 +94,106 @@ sheet1.write(0, 2, 'DESC')
 sheet1.write(0, 3, '5%')
 sheet1.write(0, 4, '1%')
 
-for i in range(1,11):
+for i in range(1, 11):
 
-    #lista = arrayDesc(i)
     lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
+    n = len(lista)
     sheet1.write(i, 0, n)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 1, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
-
-    #lista = arrayDesc(i)
     lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
     sheet1.write(q, 0, n)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 1, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
-for i in range(1,11):
+for i in range(1, 11):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
-
+    n = len(lista)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 2, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
     lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
 
-
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 2, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
-for i in range(1,11):
+for i in range(1, 11):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
     lista = array5(i)
-    #lista = array1(i)
-    n=len(lista)
+    n = len(lista)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 3, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
     lista = array5(i)
-    #lista = array1(i)
     n = len(lista)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 3, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 
 print("--------------------------------------------")
-for i in range(1,11):
+for i in range(1, 11):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
     lista = array1(i)
-    n=len(lista)
+    n = len(lista)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(i, 4, int((fim-ini)*1000))
 
 q = 11
-for i in range(20,110,10):
+for i in range(20, 110, 10):
 
-    #lista = arrayDesc(i)
-    #lista = arrayAleatorio(i)
-    #lista = array5(i)
     lista = array1(i)
     n = len(lista)
 
     ini = time.time()
     radixSort(lista)
     fim = time.time()
-    #print("tempo em sec "+str((fim-ini)*1000))
+    #print("tempo em millis "+str((fim-ini)*1000))
     sheet1.write(q, 4, int((fim - ini) * 1000))
-    q+=1
+    q += 1
 print("--------------------------------------------")
 
 wb.save('RS.xls')
