@@ -11,7 +11,6 @@ Tabela de conteúdos
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
      * [ShellSort](#shellsort)
-     	* [Como funciona](#como-funciona) 
      * [QuickSort](#quicksort)
      * [QuickSort + Insertion Sort](#quicksort--insertion-sort)
      * [Radix Sort](#radix-sort)
@@ -27,9 +26,42 @@ Tabela de conteúdos
 Este programa tem como objetivo analisar vários algoritmos de ordenamento, exportando para excel os tempos de execução para vários valores de estudo 
 
 ---
+## ShellSort
+
+Shellsort é um tipo de comparação no local. Pode ser visto como uma generalização do Bubble Sort ou Insertion Sort.\
+O método começa classificando pares de elementos distantes um do outro, então progressivamente reduz a lacuna entre os elementos a serem comparados.\
+Inicia com elementos distantes, pode mover alguns elementos fora do lugar 
+elementos na posição mais rápido do que um vizinho mais próximo simples 
+intercâmbio.
+
+
+## QuickSort
+
+Quicksort é um algoritmo de divisão e conquista.
+Quicksort primeiro divide uma grande matriz em duas menores 
+submatrizes: os elementos baixos e os elementos altos.
+O Quicksort pode então classificar recursivamente as submatrizes
+
+As etapas são:
+
+1. Escolha um elemento, denominado pivô, da matriz.
+2. Particionamento: reordene a matriz para que todos os elementos com 
+valores menores que o pivô vêm antes do pivô, enquanto todos 
+elementos com valores maiores do que o pivô vêm depois dele 
+(valores iguais podem ser usados em qualquer direção). Após este particionamento,
+o pivô está em sua posição final. Isso é chamado de
+operação de partição.
+3. Aplique recursivamente as etapas acima à submatriz de 
+elementos com valores menores e separadamente para o 
+submatriz de elementos com valores maiores.
+
+Visualização animada do algoritmo quicksort.
+
+![Quicksort](https://www.tutorialspoint.com/data_structures_algorithms/images/quick_sort_partition_animation.gif)
 
 
 ## QuickSort + Insertion Sort
+
 
 ## Radix Sort
 
