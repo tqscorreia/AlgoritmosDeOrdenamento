@@ -75,6 +75,8 @@ dígitos que compartilham a mesma posição significativa e valor. Uma notação
 (por exemplo, nomes ou datas) e números de ponto flutuante especialmente formatados, raiz 
 sort não se limita a inteiros.
 
+<img align="center" src="https://cdn.discordapp.com/attachments/773515424197115925/1011643668085604462/unknown.png"/>
+
 
 ### Eficiência
 
@@ -91,9 +93,6 @@ então `w` tem que ser pelo menos` log n` para uma máquina de acesso aleatório
 armazene-os na memória, o que dá, na melhor das hipóteses, uma complexidade de tempo `O (n log n)`. Este
 pareceria tornar a classificação radix no máximo igualmente eficiente quanto a melhor 
 classificações baseadas em comparação (e pior se as chaves forem muito mais longas do que `log n`).
-
-![Radix Sort](https://www.researchgate.net/publication/291086231/figure/fig1/AS:614214452404240@1523451545568/Simplistic-illustration-of-the-steps-performed-in-a-radix-sort-In-this-example-the.png)
-
 
 
 
