@@ -62,6 +62,9 @@ Visualização animada do algoritmo quicksort.
 
 ## QuickSort + Insertion Sort
 
+O Insertion Sort é um algoritmo de ordenação simples que constrói a matriz ordenada final (ou array) um item de cada vez. É pouco eficiente em arrays com muitos valores grandes.
+No entanto com a execução do quicksort parcialmente, vamos obter um array mais organizado o que faz com que a açao do insertion sort seja mais eficaz.
+
 
 ## Radix Sort
 
